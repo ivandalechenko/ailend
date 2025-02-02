@@ -1,0 +1,26 @@
+.Direction {
+    margin-top: 48px;
+
+    &_subheader {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        color: rgba($color: #fff, $alpha: .5);
+
+    }
+
+    &_header {
+        margin-top: 8px;
+        font-size: 40px;
+        font-family: 'gt';
+    }
+
+    &_chart {
+        height: 500px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: inherit;
+        transform: matrix(0.97, -0.26, 0.5, 0.87, 0, 0);
+    }
+}

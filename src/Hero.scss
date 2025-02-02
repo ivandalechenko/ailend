@@ -1,0 +1,124 @@
+.Hero {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 24px;
+    // background: #fff4;
+    background: linear-gradient(to bottom, #0A0A0A, #0F0F0F);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    border: 1px solid #fff4;
+
+    &_content {
+        width: 90%;
+        height: 280px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        position: relative;
+        z-index: 2;
+
+        div {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &_header {
+        font-family: 'GT';
+        font-size: 24px;
+    }
+
+    &_subheader {
+        margin-top: 18px;
+        font-family: 'GT';
+        font-size: 48px;
+    }
+
+    &_text {
+        margin-top: 36px;
+        color: #fff8;
+        max-width: 350px;
+    }
+
+    &_decor {
+
+        &_left,
+        &_right {
+            pointer-events: none;
+            min-width: 10px;
+            min-height: 10px;
+            // background: red;
+        }
+
+        &_large {
+            pointer-events: none;
+            width: 100% !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 0px;
+            flex-wrap: wrap;
+        }
+
+        &_left {
+            &_char {
+                left: 100px;
+
+                img {
+                    min-width: 300px;
+                    rotate: -20deg;
+                }
+            }
+
+            &_light {
+
+                &_inner {
+                    min-height: 300px;
+                    min-width: 500px;
+                    border-radius: 100%;
+                    background: #C451E2;
+                    filter: blur(100px);
+                }
+            }
+        }
+
+        &_right {
+            &_light {
+
+                &_inner {
+                    min-height: 300px;
+                    min-width: 500px;
+                    border-radius: 100%;
+                    background: #7C4BE0;
+                    filter: blur(100px);
+                }
+            }
+        }
+
+        &_net {
+            align-items: start;
+            width: 100% !important;
+
+            img {
+                width: 100% !important;
+                height: 300px;
+                object-fit: cover;
+            }
+        }
+
+        &_squares {
+            align-items: start;
+            width: 100% !important;
+
+            img {
+                width: 80% !important;
+            }
+        }
+    }
+}

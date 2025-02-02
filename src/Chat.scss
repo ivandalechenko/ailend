@@ -1,0 +1,63 @@
+.Chat {
+    position: relative;
+    z-index: 2;
+    margin-top: 40px;
+    border: 1px solid rgba($color: #fff, $alpha: .2);
+    border-radius: 16px;
+    background: linear-gradient(0deg, #171717, #0D0D0D);
+    overflow: hidden;
+
+    &_content {
+        min-height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        padding: 40px;
+
+    }
+
+    &_header {
+        margin-top: 32px;
+        font-family: 'gt';
+        width: 100%;
+        font-size: 48px;
+    }
+
+    &_subheader {
+        margin-top: 32px;
+        font-size: 18px;
+        max-width: 350px;
+        color: rgba($color: #fff, $alpha: .5);
+    }
+
+    &_decor {
+        width: 100% !important;
+        justify-content: right;
+
+        &_phone {
+            justify-content: right;
+            align-items: end;
+            right: 16px;
+
+            img {
+                width: 450px;
+            }
+        }
+
+        &_light {
+            align-items: end;
+            left: -180px;
+
+            &_inner {
+                min-width: 900px;
+                min-height: 450px;
+                border-radius: 100%;
+                background: linear-gradient(to right, #3E46DE, #EE54E4);
+                filter: blur(100px);
+                rotate: -22.5deg;
+            }
+        }
+    }
+
+}
