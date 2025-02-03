@@ -1,1 +1,39 @@
-.Privacy {}
+.Privacy {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: #000a;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+
+    &_inner {
+        cursor: default;
+        width: 100%;
+        max-width: 600px;
+        height: 90vh;
+        overflow-y: scroll;
+        background: linear-gradient(135deg, #171717, #0D0D0D);
+        border-radius: 16px;
+        border: 2px solid rgba($color: #fff, $alpha: .2);
+        padding: 24px;
+    }
+
+    &_header {
+        font-size: 24px;
+
+        &:not(:first-child) {
+            margin-top: 32px;
+        }
+    }
+
+    &_el {
+        margin-top: 24px;
+        color: rgba($color: #fff, $alpha: .5);
+    }
+}

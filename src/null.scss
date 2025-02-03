@@ -173,3 +173,32 @@ html {
   overflow: hidden;
   // padding-bottom: 100vh;
 }
+
+/* Стили для WebKit (Chrome, Safari) */
+.Privacy_inner::-webkit-scrollbar {
+  width: 4px;
+  /* Ширина полосы прокрутки */
+}
+
+.Privacy_inner::-webkit-scrollbar-track {
+  background: transparent;
+  /* Прозрачный фон */
+}
+
+.Privacy_inner::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  /* Полупрозрачный скролл */
+  border-radius: 10px;
+  /* Закругленные края */
+}
+
+.Privacy_inner::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7);
+  /* Цвет при наведении */
+}
+
+/* Для Firefox */
+.Privacy_inner {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+}

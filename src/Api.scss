@@ -108,11 +108,13 @@
         max-height: 280px;
         display: flex;
         justify-content: center;
-        align-content: inherit;
+        align-content: center;
+        top: -100px;
+        position: relative;
 
         img {
-            min-width: 340px;
-            min-height: 340px;
+            min-width: 500px;
+            min-height: 500px;
         }
     }
 }
