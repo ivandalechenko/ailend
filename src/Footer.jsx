@@ -5,7 +5,7 @@ import Privacy from './Privacy';
 
 
 export default () => {
-    const [showPrivacy, setshowPrivacy] = useState(true);
+    const [showPrivacy, setshowPrivacy] = useState(false);
 
     return (
         <>
