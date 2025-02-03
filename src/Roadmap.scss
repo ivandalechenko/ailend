@@ -97,6 +97,18 @@
                 &_light {
                     color: rgba($color: #fff, $alpha: .7);
                     background: linear-gradient(to right, rgba(#fff, .3), rgba(#fff, .1));
+                    background-size: 200% 200%;
+                    animation: loadingRoadmap 1s infinite alternate ease-in-out;
+
+                    @keyframes loadingRoadmap {
+                        0% {
+                            background-position: 0% 0%;
+                        }
+
+                        100% {
+                            background-position: 100% 0%;
+                        }
+                    }
                 }
             }
         }

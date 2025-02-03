@@ -1,7 +1,7 @@
 .Chat {
     position: relative;
     z-index: 2;
-    margin-top: 40px;
+    // margin-top: 40px;
     border: 1px solid rgba($color: #fff, $alpha: .2);
     border-radius: 16px;
     background: linear-gradient(0deg, #171717, #0D0D0D);
@@ -10,6 +10,9 @@
 
     &_wrapper {
         padding: 0px 8px;
+        background: #080808;
+        position: relative;
+        box-shadow: 0px -30px 30px #080808, 0px -30px 30px #080808;
     }
 
     &_content {

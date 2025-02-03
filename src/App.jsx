@@ -17,7 +17,7 @@ function App() {
       <Features />
       <Direction />
       <Chat />
-      {/* <Highlights /> */}
+      <Highlights />
       <Api />
       <Roadmap />
       <Footer />

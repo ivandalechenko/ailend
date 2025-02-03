@@ -1,5 +1,5 @@
 .Direction {
-    margin-top: 48px;
+    padding-top: 48px;
 
     &_subheader {
         display: flex;
@@ -20,7 +20,22 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        align-content: inherit;
         transform: matrix(0.97, -0.26, 0.5, 0.87, 0, 0);
+
+        @media(max-width: 800px) {
+            height: 300px;
+
+            svg {
+                position: relative;
+                top: -100px;
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            svg {
+                top: -200px;
+            }
+        }
     }
 }
