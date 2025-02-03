@@ -1,0 +1,22 @@
+.Highlights {
+    margin-top: 80px;
+
+    &_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_large {
+            font-size: 40px;
+            font-family: 'gt';
+        }
+
+        &_small {
+            font-size: 16px;
+            max-width: 100%;
+            width: 350px;
+            text-align: right;
+            color: rgba($color: #fff, $alpha: .5);
+        }
+    }
+}

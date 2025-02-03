@@ -1,0 +1,28 @@
+.Footer {
+    &_wrapper {
+        margin-top: 120px;
+        width: 100%;
+        padding: 24px 0px;
+        background: #121212;
+    }
+
+    &_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &_bot {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_text {
+        color: #A9A9A9;
+    }
+
+    &_copy {
+        color: rgba($color: #fff, $alpha: .3);
+    }
+}

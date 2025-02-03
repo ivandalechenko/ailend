@@ -12,9 +12,14 @@
     align-content: space-between;
     border: 1px solid #fff4;
 
+    &_wrapper {
+        padding: 8px;
+    }
+
     &_content {
         width: 90%;
-        height: 280px;
+        min-height: 280px;
+        padding: 24px 0px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -32,12 +37,26 @@
     &_header {
         font-family: 'GT';
         font-size: 24px;
+
+        @media(max-width: 700px) {
+            font-size: 18px;
+        }
     }
 
     &_subheader {
         margin-top: 18px;
         font-family: 'GT';
         font-size: 48px;
+
+        @media(max-width: 700px) {
+            font-size: 40px;
+            margin-top: 16px;
+        }
+
+        @media(max-width: 360px) {
+            font-size: 36px;
+            margin-top: 16px;
+        }
     }
 
     &_text {
@@ -70,9 +89,17 @@
             &_char {
                 left: 100px;
 
+                @media(max-width: 800px) {
+                    left: 0px;
+                }
+
                 img {
                     min-width: 300px;
                     rotate: -20deg;
+
+                    @media(max-width: 800px) {
+                        min-width: 200px;
+                    }
                 }
             }
 
@@ -84,6 +111,13 @@
                     border-radius: 100%;
                     background: #C451E2;
                     filter: blur(100px);
+
+                    @media(max-width: 800px) {
+                        min-height: 150px;
+                        min-width: 300px;
+                        filter: blur(80px);
+                        rotate: -45deg;
+                    }
                 }
             }
         }
@@ -97,6 +131,13 @@
                     border-radius: 100%;
                     background: #7C4BE0;
                     filter: blur(100px);
+
+                    @media(max-width: 800px) {
+                        min-height: 150px;
+                        min-width: 300px;
+                        filter: blur(80px);
+                        rotate: -45deg;
+                    }
                 }
             }
         }

@@ -43,7 +43,9 @@ export default () => {
                             <div className="Api_element_line"></div>
                             <div className="Api_element_header">
                                 <img src={element.img} alt="" />
-                                {element.header}
+                                <span className='Api_element_header_text'>
+                                    {element.header}
+                                </span>
                             </div>
                             <div className="Api_element_content">
                                 {element.content}

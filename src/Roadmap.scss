@@ -1,5 +1,129 @@
 .Roadmap {
-    font-size: 10px;
+    margin-top: 120px;
 
-    &_header {}
+    &_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media(max-width: 600px) {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &_text {
+            font-size: 40px;
+            font-family: 'gt';
+
+            @media(max-width: 600px) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        &_minitext {
+            max-width: 310px;
+            text-align: right;
+            font-size: 16px;
+            color: rgba($color: #fff, $alpha: .5);
+
+            @media(max-width: 600px) {
+                margin-top: 8px;
+                text-align: center;
+            }
+        }
+    }
+
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+        margin-top: 48px;
+
+        @media(max-width: 600px) {
+            gap: 48px;
+        }
+    }
+
+    &_element {
+        width: calc(25% - 24px);
+
+        @media(max-width: 1100px) {
+            width: calc(50% - 18px);
+        }
+
+        @media(max-width: 600px) {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &_num {
+            font-size: 14px;
+            color: rgba($color: #fff, $alpha: .5);
+
+            @media(max-width: 600px) {
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        &_pb {
+            margin-top: 12px;
+            height: 40px;
+            background: linear-gradient(to right, rgba(#fff, .1), rgba(#fff, .03));
+            border: 2px solid rgba($color: #fff, $alpha: .1);
+            border-radius: 8px;
+
+            @media(max-width: 600px) {
+                width: 100%;
+            }
+
+            &_inner {
+                display: flex;
+                align-items: center;
+                padding: 0px 12px;
+                height: 36px;
+                justify-content: space-between;
+                white-space: nowrap;
+                border-radius: 8px;
+
+                &_dark {
+                    color: rgba($color: #fff, $alpha: .3);
+                }
+
+                &_light {
+                    color: rgba($color: #fff, $alpha: .7);
+                    background: linear-gradient(to right, rgba(#fff, .3), rgba(#fff, .1));
+                }
+            }
+        }
+
+        &_header {
+            margin-top: 32px;
+            font-size: 24px;
+            font-family: 'gt';
+
+            @media(max-width: 600px) {
+                margin-top: 12px;
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        &_subheader {
+            margin-top: 24px;
+            font-size: 14px;
+            color: rgba($color: #fff, $alpha: .4);
+
+            @media(max-width: 600px) {
+                margin-top: 8px;
+                text-align: center;
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+    }
 }

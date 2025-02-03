@@ -20,7 +20,7 @@ const elements = [{
 
 export default () => {
     return (
-        <div className='Roadmap'>
+        <div className='Roadmap container' >
             <div className='Roadmap_header'>
                 <div className='Roadmap_header_text'>
                     Roadmap
@@ -31,9 +31,29 @@ export default () => {
             </div>
             <div className='Roadmap_list'>
                 {
-                    elements.map((element) => {
+                    elements.map((element, index) => {
                         return <div className='Roadmap_element'>
-                            <div className='Roadmap_element_num'></div>
+                            <div className='Roadmap_element_num'>0{index + 1}</div>
+                            <div className='Roadmap_element_pb'>
+                                <div className={`Roadmap_element_pb_inner ${element.percent === 100 || element.percent === 0 ? 'Roadmap_element_pb_inner_dark' : 'Roadmap_element_pb_inner_light'} `} style={{
+                                    width: `${Math.max(element.percent, 30)}%`,
+                                }}>
+                                    {
+                                        element.percent !== 0 ? <>
+                                            {element.percent}%
+                                            {
+                                                element.percent === 100 && <img src="/img/check.svg" alt="" />
+                                            }
+                                        </> : 'Soon in progress'
+                                    }
+                                </div>
+                            </div>
+                            <div className='Roadmap_element_header'>
+                                {element.header}
+                            </div>
+                            <div className='Roadmap_element_subheader'>
+                                {element.subheader}
+                            </div>
                         </div>
                     })
                 }
