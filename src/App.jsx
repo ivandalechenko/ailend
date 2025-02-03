@@ -7,6 +7,12 @@ import Highlights from "./Highlights"
 import Api from "./Api"
 import Roadmap from "./Roadmap"
 import Footer from "./Footer"
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/all"
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
 

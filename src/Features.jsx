@@ -61,8 +61,8 @@ export default () => {
             </div>
             <div className='Features_list'>
                 {
-                    features.map((feature) => {
-                        return <Feature data={feature} />
+                    features.map((feature, index) => {
+                        return <Feature key={`feature-${index}`} data={feature} />
                     })
                 }
             </div>

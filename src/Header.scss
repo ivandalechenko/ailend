@@ -18,8 +18,8 @@
     }
 
     &_link {
-        min-height: 24px;
-        min-width: 24px;
+        min-height: 32px;
+        min-width: 32px;
         border-radius: 8px;
         background-color: rgba($color: #FFFFFF, $alpha: .7);
         display: flex;
@@ -29,8 +29,11 @@
         transition: background-color 200ms;
 
         &:hover {
-
             background-color: rgba($color: #FFFFFF, $alpha: 1);
+        }
+
+        img {
+            width: 18px;
         }
     }
 

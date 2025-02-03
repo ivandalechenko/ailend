@@ -1,4 +1,7 @@
+import { useRef } from 'react';
 import './Api.scss';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const elements = [
     {
@@ -25,8 +28,79 @@ const elements = [
 
 
 export default () => {
+
+    const scope = useRef(null)
+
+    useGSAP(
+        () => {
+            gsap.fromTo('.Api_element_1', {
+                x: -100,
+                opacity: 0,
+            }, {
+                x: 0,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.Api_header',
+                    scrub: 1,
+                    // markers: true,
+                    start: `0px 70%`,
+                    end: `80px 70%`,
+                }
+            })
+            gsap.fromTo('.Api_element_2', {
+                y: 100,
+                opacity: 0,
+            }, {
+                y: 0,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.Api_header',
+                    scrub: 1,
+                    // markers: true,
+                    start: `80px 70%`,
+                    end: `160px 70%`,
+                }
+            })
+            gsap.fromTo('.Api_element_3', {
+                y: 100,
+                opacity: 0,
+            }, {
+                y: 0,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.Api_header',
+                    scrub: 1,
+                    // markers: true,
+                    start: `160px 70%`,
+                    end: `240px 70%`,
+                }
+            })
+            gsap.fromTo('.Api_element_4', {
+                x: 100,
+                opacity: 0,
+            }, {
+                x: 0,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.Api_header',
+                    scrub: 1,
+                    // markers: true,
+                    start: `240px 70%`,
+                    end: `320px 70%`,
+                }
+            })
+        },
+        { scope: scope }
+    )
+
+
+
     return (
-        <div className='Api container'>
+        <div className='Api container' ref={scope}>
             <div className='Api_decor'>
                 <img src="/img/apiDecor.svg" alt="" />
             </div>
@@ -38,8 +112,8 @@ export default () => {
             </div>
             <div className='Api_elements'>
                 {
-                    elements.map((element) => {
-                        return <div className='Api_element'>
+                    elements.map((element, index) => {
+                        return <div className={`Api_element Api_element_${index + 1}`} key={`api_el_${index}`}>
                             <div className="Api_element_line"></div>
                             <div className="Api_element_header">
                                 <img src={element.img} alt="" />

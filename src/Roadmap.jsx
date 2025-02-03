@@ -1,4 +1,7 @@
+import { useRef } from 'react';
 import './Roadmap.scss';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const elements = [{
     percent: 100,
@@ -19,8 +22,78 @@ const elements = [{
 }]
 
 export default () => {
+
+    const scope = useRef(null)
+
+    useGSAP(
+        () => {
+            gsap.fromTo('.Roadmap_element_1', {
+                x: -100,
+                opacity: 0,
+            }, {
+                x: 0,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.Roadmap_header_text',
+                    scrub: 1,
+                    // markers: true,
+                    start: `0px 90%`,
+                    end: `80px 90%`,
+                }
+            })
+            gsap.fromTo('.Roadmap_element_2', {
+                y: 100,
+                opacity: 0,
+            }, {
+                y: 0,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.Roadmap_header_text',
+                    scrub: 1,
+                    // markers: true,
+                    start: `80px 90%`,
+                    end: `160px 90%`,
+                }
+            })
+            gsap.fromTo('.Roadmap_element_3', {
+                y: 100,
+                opacity: 0,
+            }, {
+                y: 0,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.Roadmap_header_text',
+                    scrub: 1,
+                    // markers: true,
+                    start: `160px 90%`,
+                    end: `240px 90%`,
+                }
+            })
+            gsap.fromTo('.Roadmap_element_4', {
+                x: 100,
+                opacity: 0,
+            }, {
+                x: 0,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.Roadmap_header_text',
+                    scrub: 1,
+                    // markers: true,
+                    start: `240px 90%`,
+                    end: `320px 90%`,
+                }
+            })
+        },
+        { scope: scope }
+    )
+
+
     return (
-        <div className='Roadmap container' >
+        <div className='Roadmap container' ref={scope} >
             <div className='Roadmap_header'>
                 <div className='Roadmap_header_text'>
                     Roadmap
@@ -32,7 +105,7 @@ export default () => {
             <div className='Roadmap_list'>
                 {
                     elements.map((element, index) => {
-                        return <div className='Roadmap_element'>
+                        return <div className={`Roadmap_element Roadmap_element_${index + 1}`} key={`roadmap_el${index + 1}`}>
                             <div className='Roadmap_element_num'>0{index + 1}</div>
                             <div className='Roadmap_element_pb'>
                                 <div className={`Roadmap_element_pb_inner ${element.percent === 100 || element.percent === 0 ? 'Roadmap_element_pb_inner_dark' : 'Roadmap_element_pb_inner_light'} `} style={{

@@ -1,4 +1,7 @@
+import { useRef } from 'react';
 import './Highlights.scss';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const content = [{
     header: "Why it's useful?",
@@ -12,8 +15,64 @@ const content = [{
 }]
 
 export default () => {
+
+
+    const scope = useRef(null)
+
+    useGSAP(
+        () => {
+            gsap.fromTo('.Highlights_element_1', {
+                x: -100,
+                opacity: 0,
+            }, {
+                x: 0,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.Highlights_header',
+                    scrub: 1,
+                    // markers: true,
+                    start: `0px 70%`,
+                    end: `100px 70%`,
+                }
+            })
+            gsap.fromTo('.Highlights_element_2', {
+                x: 100,
+                opacity: 0,
+            }, {
+                x: 0,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.Highlights_header',
+                    scrub: 1,
+                    // markers: true,
+                    start: `100px 70%`,
+                    end: `200px 70%`,
+                }
+            })
+            gsap.fromTo('.Highlights_element_3', {
+                y: 100,
+                opacity: 0,
+            }, {
+                y: 0,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '.Highlights_header',
+                    scrub: 1,
+                    // markers: true,
+                    start: `200px 70%`,
+                    end: `300px 70%`,
+                }
+            })
+        },
+        { scope: scope }
+    )
+
+
     return (
-        <div className='Highlights container'>
+        <div className='Highlights container' ref={scope}>
 
             <div className='Highlights_header'>
                 <div className='Highlights_header_text'>
@@ -29,7 +88,7 @@ export default () => {
             <div className='Highlights_content'>
                 {
                     content.map((element, index) => {
-                        return <div className='Highlights_element'>
+                        return <div className={`Highlights_element Highlights_element_${index + 1}`}>
                             <div className='Highlights_element_content'>
                                 <div className='Highlights_element_number'>
                                     0{index + 1}
@@ -37,7 +96,7 @@ export default () => {
                                 <div className='Highlights_element_header'>
                                     {element.header}
                                 </div>
-                                <div className='Highlights_element_content'>
+                                <div className='Highlights_element_text'>
                                     {element.content}
                                 </div>
                             </div>

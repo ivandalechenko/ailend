@@ -1,5 +1,7 @@
 .Features {
     margin-top: 60px;
+    position: relative;
+    z-index: 2;
 
     &_header {
         display: flex;
