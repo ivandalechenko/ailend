@@ -111,7 +111,8 @@
                     min-height: 300px;
                     min-width: 500px;
                     border-radius: 100%;
-                    background: #C451E2;
+                    background: linear-gradient(to right, #4FFB55, #FF9601);
+
                     filter: blur(100px);
                     animation: heroLight 14s infinite linear;
 
@@ -133,7 +134,7 @@
                     min-height: 300px;
                     min-width: 500px;
                     border-radius: 100%;
-                    background: #7C4BE0;
+                    background: linear-gradient(to right, #4FFB55, #FF9601);
                     filter: blur(100px);
                     animation: heroLight 10s infinite linear;
 

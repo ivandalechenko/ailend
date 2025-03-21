@@ -22,7 +22,7 @@ export default () => {
                     </div>
                     <div className='Footer_bot'>
                         <div className='Footer_text Footer_copy'>
-                            Copyright © 2025 XENAI. All rights reserved.
+                            Copyright © 2025 TASKORA. All rights reserved.
                         </div>
                         <div className='Footer_text' onClick={() => { setshowPrivacy(true) }}>
                             Privacy Policy

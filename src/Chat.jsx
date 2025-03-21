@@ -44,7 +44,7 @@ export default () => {
                         <div className='Chat_decor_light_inner'></div>
                     </div>
                     <div className='Chat_decor_phone free_img'>
-                        <img src="/img/phone.png" className='Chat_decor_phone_img' alt="" />
+                        <img src="/img/phone.webp" className='Chat_decor_phone_img' alt="" />
                     </div>
                 </div>
             </div>

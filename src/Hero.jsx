@@ -15,9 +15,6 @@ export default () => {
                     <div className='Hero_decor_left_light free_img'>
                         <div className='Hero_decor_left_light_inner'></div>
                     </div>
-                    <div className='Hero_decor_left_char free_img'>
-                        <img src="/img/chel.png" className='pa' alt="" />
-                    </div>
                 </div>
                 <div className='Hero_content'>
                     <div className='Hero_header'>

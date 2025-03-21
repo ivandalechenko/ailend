@@ -6,10 +6,10 @@ export default ({ hide }) => {
                 e.stopPropagation()
             }}>
                 <div className='Privacy_header'>
-                    Xenai Privacy Policy
+                    Taskora Privacy Policy
                 </div>
                 <div className='Privacy_el'>
-                    This Privacy Policy (the "Policy") describes how Xenai ("we", "our", or "us") collects, uses, stores, transfers, and protects information obtained from users (the "User" or "you") through our AI assistant service, Xenai.
+                    This Privacy Policy (the "Policy") describes how TASKORA ("we", "our", or "us") collects, uses, stores, transfers, and protects information obtained from users (the "User" or "you") through our AI assistant service, TASKORA.
                     <br /><br />
                     Please read this Policy carefully before using our service. By using the service, you agree to the terms of this Policy.
 
@@ -92,13 +92,13 @@ export default ({ hide }) => {
                 <div className='Privacy_el'>
                     If you have any questions, comments, or requests regarding this Privacy Policy, please contact us using the following details:
                     <br /><br />
-                    - Email: info@xenai.org
+                    - Email: info@taskora.org
                 </div>
                 <div className='Privacy_header'>
                     P.S
                 </div>
                 <div className='Privacy_el'>
-                    By using the Xenai service, you acknowledge that you have read this Privacy Policy and agree to its terms. If you do not agree with the terms of this Policy, please do not use our service.
+                    By using the TASKORA service, you acknowledge that you have read this Privacy Policy and agree to its terms. If you do not agree with the terms of this Policy, please do not use our service.
                     <br /><br />
                     Please note: This document is an example and may require adaptation to the specifics of your service and the legal requirements in your jurisdiction.
                 </div>
